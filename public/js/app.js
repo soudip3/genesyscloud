@@ -56,7 +56,7 @@ function EnableDisableTextBox(){
     }
     if(transferUserAnotherQueue.checked){
         queueName.disabled = transferUserAnotherQueue.checked ? false : true
-        userList.disabled = true
+        //userList.disabled = true
         userEmail.disabled = true
         checkQueue.disabled = false
         if(!queueName.disabled){
