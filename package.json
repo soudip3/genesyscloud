@@ -4,5 +4,24 @@
     "hbs": "^4.2.0",
     "purecloud-platform-client-v2": "^138.0.1",
     "request": "^2.88.2"
-  }
+  },
+  "name": "genesyscloudpullawayconversation",
+  "description": "��#\u0000 \u0000G\u0000e\u0000n\u0000e\u0000s\u0000y\u0000s\u0000C\u0000l\u0000o\u0000u\u0000d\u0000P\u0000u\u0000l\u0000l\u0000A\u0000w\u0000a\u0000y\u0000C\u0000o\u0000n\u0000v\u0000e\u0000r\u0000s\u0000a\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soudip3/GenesysCloudPullAwayConversation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soudip3/GenesysCloudPullAwayConversation/issues"
+  },
+  "homepage": "https://github.com/soudip3/GenesysCloudPullAwayConversation#readme"
 }

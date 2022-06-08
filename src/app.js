@@ -27,10 +27,7 @@ app.get('', function(req,res){
     })
 })
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+
 
 const client = platformClient.ApiClient.instance;
 client.setEnvironment(platformClient.PureCloudRegionHosts.us_east_1); // Genesys Cloud region
