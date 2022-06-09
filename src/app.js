@@ -33,7 +33,7 @@ const client = platformClient.ApiClient.instance;
 client.setEnvironment(platformClient.PureCloudRegionHosts.us_east_1); // Genesys Cloud region
 
 // Manually set auth token or use loginImplicitGrant(...) or loginClientCredentialsGrant(...)
-client.setAccessToken("BeZhgUwg1nkLTYs8KZSPgkOCxaJuZ-YXTE6ttBG8nzERk00xIXtfrKJBwIl7eiJGOG71cOPlmFOK-xq98AafiA");
+client.setAccessToken("dQiYSxque5jzZhK0eiH7xyTC5O7VLr28mmZWyvJzApRDk55WG9O-cAcXFXdF-IB0C87-vDHe1xN7M27mY1JZ2A");
 
 app.get('/transferAnotherQueue', function(req, res){
     const interactionID = req.query.interactionID
