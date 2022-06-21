@@ -1,3 +1,4 @@
+let lastQueueName = ""
 function EnableDisableTextBox(){
     var transferSameQueue = document.getElementById('transferSameQueue')
     var transferUserSameQueue = document.getElementById('transferUserSameQueue')
@@ -148,7 +149,8 @@ genesysCloud.addEventListener('submit',function(e){
     }
     if(transferUserAnotherQueue.checked){
         var options = document.getElementById('userList')
-        if(options.value===""){
+        if(lastQueueName!==queueName){
+            console.log("hello1")
             var userList = document.getElementById('userList')
             userList.disabled = false
             const url = '/gerAnotherQueueUserList?queueName=' + encodeURIComponent(queueName)
@@ -167,12 +169,13 @@ genesysCloud.addEventListener('submit',function(e){
                             option.text = data.output[i].agentName
                             option.value = data.output[i].agentID
                             options.add(option)
-                        }  
+                        }
+                        lastQueueName = queueName  
                     }
                 })
             })
         }
-        else{
+        else if(queueName!== "" && options.value!==""){
             console.log(options.value)
             const userID = options.value
             const url = '/transferUserAnotherQueue?interactionID=' + encodeURIComponent(interactionID) +'&userID=' +encodeURIComponent(userID)+ '&queueName=' +encodeURIComponent(queueName)
@@ -187,6 +190,11 @@ genesysCloud.addEventListener('submit',function(e){
                     }
                 })
             })
+            console.log("heelo")
+        }
+        else{
+            console.log(queueName)
+            console.log(options.value)
         }
     }
     if(transferUser.checked){
