@@ -80,17 +80,20 @@ genesysCloud.addEventListener('submit',function(e){
             response.json().then(function(data){
                 if(data.error){
                     console.log(data.error)
+                    alert("Please check your input")
                 }
                 else{
                     console.log(data.output)
-                    
+                    if(data.output === 'failure'){
+                        alert("Please check your input")
+                    }
+                    else{
+                        alert("We have successfully moved interaction!!")
+                        
+                    }
                 }
             })
         })
-        document.getElementById('interactionID').innerHTML = ""
-        document.getElementById('queueName').value = ""
-        document.getElementById('userEmail').value = ""
-    
     }
     if(transferUserSameQueue.checked){
         var options = document.getElementById('userList')
